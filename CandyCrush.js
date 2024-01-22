@@ -97,7 +97,7 @@ function checkRowForFour() {
 
         if (rowOfFour.every((index) =>squares[index].style.backgroundImage === decidedColor &&!isBlank))
          {
-            score += 4;
+            score += 8;
             Display.innerHTML = score;
             rowOfFour.forEach((index) => {
                 squares[index].style.backgroundImage = "";
@@ -120,7 +120,7 @@ function checkColumnForFour() {
                     !isBlank
             )
         ) {
-            score += 4;
+            score += 8;
             Display.innerHTML = score;
             columnOfFour.forEach((index) => {
                 squares[index].style.backgroundImage = "";
@@ -141,7 +141,7 @@ function checkRowForThree() {
 
         if (rowOfThree.every((index) =>squares[index].style.backgroundImage === decidedColor &&!isBlank)) 
         {
-            score += 3;
+            score += 6;
             Display.innerHTML = score;
             rowOfThree.forEach((index) => {
                 squares[index].style.backgroundImage = "";
@@ -159,7 +159,7 @@ function checkColumnForThree() {
         const isBlank = squares[i].style.backgroundImage === "";
          if (columnOfThree.every((index) =>squares[index].style.backgroundImage === decidedColor &&!isBlank)) 
         {
-            score += 3;
+            score += 6;
             Display.innerHTML = score;
             columnOfThree.forEach((index) => {
                 squares[index].style.backgroundImage = "";
@@ -176,7 +176,7 @@ if(score>300){
 if(score>700){
     st2.style.backgroundColor="yellow";
 }
-if(score>100){
+if(score>1000){
     st3.style.backgroundColor="yellow";
 }
 }
